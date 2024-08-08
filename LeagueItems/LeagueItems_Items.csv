@@ -5,7 +5,7 @@ it_dead_mans_plate,0,,,,
 trigger,autoStart,,,,
 quickPattern,tpat_hb_square_set_var,varIndex,0,amount,0
 ,,,,,
-trigger,distanceTickBattle,,,,
+trigger,distanceTickBattle,tcond_square_self,,,
 condition,tcond_hb_check_square_var_lte,0,4,,
 quickPattern,tpat_hb_square_add_var,varIndex,0,amount,1
 ,,,,,
@@ -36,7 +36,6 @@ quickPattern,tpat_hb_set_var,varIndex,0,amount,0
 trigger,hotbarUsed3,tcond_hb_special,,,
 quickPattern,tpat_hb_square_add_var,varIndex,0,amount,1
 quickPattern,tpat_hb_inc_var,varIndex,0,amount,1
-quickPattern,tpat_hb_flash_item,,,,
 set,tset_uservar,u_axiomcdr,-500,*,r_vars0
 target,ttrg_hotbarslots_self_weapontype,3,,,
 quickPattern,tpat_hb_add_cooldown,amount,u_axiomcdr,,
@@ -98,7 +97,6 @@ addPattern,ipat_timewarp_wand,,,,
 it_navori_flickerblade,6,,,,
 ,,,,,
 trigger,onDamageDone,tcond_dmg_self_primary,,,
-quickPattern,tpat_hb_flash_item,,,,
 target,ttrg_hotbarslots_self_weapontype,2,,,
 quickPattern,tpat_hb_add_cooldown,amount,-1000,,
 target,ttrg_hotbarslots_self_weapontype,3,,,
